@@ -9,7 +9,7 @@ all:
 init:
 	rsync -ap src/resources_init/ resources
 	mkdir markdown_src
-	#cp -r src/markdown_src_init/* markdown_src
+	mkdir website
 	cp src/create_page.sh create_page.sh
 	./create_page.sh markdown_src
 	git clone https://github.com/Python-Markdown/markdown resources/python_markdown
@@ -24,3 +24,4 @@ reset:
 
 clean:
 	rm -rf website
+	mkdir website

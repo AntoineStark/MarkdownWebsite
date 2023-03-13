@@ -11,15 +11,17 @@ To init your website sources, clone or download this repository to your computer
 
 ```bash
     $ ls
-    XXX
+    Makefile        README.md       src
 ```
 
 
 You can init the markdown source files files using 
 
-```shsh
+```bash
     $ make init
-    XXXX
+    
+    $ ls
+    Makefile    README.md    create_page.sh    markdown_src    resources    src    website
 ```
 
 `make init` creates a folder called `markdown_src` which will contain your markdown pages that will be transferred to the website, as well as a folder named `resources` which contains the common css files, as well as html parts of the websites that are common in all the webpages (navbar at the left, header, website title, etc.).
@@ -62,8 +64,11 @@ In the `resources` folder, you will find :
 
 To compile the website, use
 
-```
+```bash
     $ make
 ```
 
-Every html file will be compiled with the right links, CSS and website-wide parts. You can then move the `website` folder to the server of your choice, or browse it immediately.
+Every html file will be compiled with the right links, CSS and website-wide parts. You can then move the `website` folder to the server of your choice, or browse it immediately with :
+```bash
+    $ open website/index.html
+```
