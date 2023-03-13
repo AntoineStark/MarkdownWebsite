@@ -23,5 +23,4 @@ reset:
 
 
 clean:
-	rm -rf website
-	mkdir website
+	rm -rf website/*
