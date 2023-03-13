@@ -32,7 +32,7 @@ The directory structure from the `markdown_src` folder will be copied onto the `
 
 There is a macro to create a new page for your website :
 ```bash
-    $ make create markdown_src/folder/webpage
+    $ ./create_page.sh markdown_src/folder/webpage
 ```
 
 '`markdown_src/`' can be omitted.
