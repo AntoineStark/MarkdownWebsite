@@ -1,6 +1,6 @@
 .vscode/settings.json
 markdown_src
 resources
-create_page.sh
+./create_page.sh
 website
 **/.DS_Store
