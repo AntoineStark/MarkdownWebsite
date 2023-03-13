@@ -1,8 +1,11 @@
 SRC_DIR := ./markdown_src
 DEST_DIR := ./website
+RES_DIR := ./resources
 
 all:
 	rsync -ap "$(SRC_DIR)/" "$(DEST_DIR)/"
+
+	rsync -ap "$(RES_DIR)/" "$(DEST_DIR)/resources"
 
 	find "$(DEST_DIR)" -name '*.md' -print | xargs -n1 python3 resources/md_to_html.py
 

@@ -10,7 +10,31 @@ def convert_md_to_html(md_file_path):
         md_contents = md_file.read()
 
     # Convert the Markdown contents to HTML
+
+    body = markdown.markdown(md_contents)
+
+    css_path =  os.path.relpath("./website/resources/splendor.css", start=md_file_path)
+
+    head = f"""<meta charset="utf-8">
+    <link href="{css_path}" type="text/css" rel="stylesheet" />
+    <title>{os.path.dirname(md_file_path)}</title>"""
+
+
+
+
     html_contents = markdown.markdown(md_contents)
+    html_contents = f"""<!DOCTYPE html>
+    <html>
+        <head>
+            {head}
+        </head>
+        <body>
+            {body}
+        </body>
+    </html>
+    """
+    
+
 
     # Get the output file path by replacing the file extension with .html
     html_file_path = os.path.splitext(md_file_path)[0] + '.html'
